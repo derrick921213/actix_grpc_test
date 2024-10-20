@@ -1,0 +1,61 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "Rust",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/rust:1-1-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/protoc:1": {}
+	},
+	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
+	"mounts": [
+		// {
+		// 	"source": "devcontainer-cargo-cache-${devcontainerId}",
+		// 	"target": "/usr/local/cargo",
+		// 	"type": "volume"
+		// },
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+	],
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "rustc --version",
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"aaron-bond.better-comments",
+				"jeff-hykin.better-dockerfile-syntax",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"formulahendry.code-runner",
+				"mikestead.dotenv",
+				"mhutchie.git-graph",
+				"huizhou.githd",
+				"github.vscode-github-actions",
+				"GitHub.copilot",
+				"GitHub.vscode-pull-request-github",
+				"eamodio.gitlens",
+				"ms-vscode.hexeditor",
+				"AykutSarac.jsoncrack-vscode",
+				"ms-vscode.makefile-tools",
+				"PKief.material-icon-theme",
+				"christian-kohler.path-intellisense",
+				"humao.rest-client",
+				"1YiB.rust-bundle",
+				"JScearcy.rust-doc-viewer",
+				"Swellaby.rust-pack",
+				"dustypomerleau.rust-syntax",
+				"rust-lang.rust-analyzer",
+				"Gruntfuggly.todo-tree",
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+}
