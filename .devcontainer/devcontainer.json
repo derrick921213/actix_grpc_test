@@ -55,7 +55,8 @@
 				"dustypomerleau.rust-syntax",
 				"rust-lang.rust-analyzer",
 				"Gruntfuggly.todo-tree",
-				"redhat.vscode-yaml"
+				"redhat.vscode-yaml",
+				"fill-labs.dependi"
 			]
 		}
 	}
