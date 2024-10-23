@@ -56,7 +56,8 @@
 				"rust-lang.rust-analyzer",
 				"Gruntfuggly.todo-tree",
 				"redhat.vscode-yaml",
-				"fill-labs.dependi"
+				"fill-labs.dependi",
+				"Postman.postman-for-vscode"
 			]
 		}
 	}
